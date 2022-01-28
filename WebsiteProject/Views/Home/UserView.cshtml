@@ -1,0 +1,35 @@
+﻿
+@model List<WebsiteProject.Models.User>
+
+@{
+    ViewData["Title"] = "Camera View";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1 style="text-align:center">List of Users</h1>
+
+<div style="max-width: 65%; margin: 0 auto; background-color: white;">
+    <table class="table table-bordered">
+        <thead style="text-align: center; vertical-align: middle; background-color: red;">
+            <tr>
+                <th>ID</th>
+                <th>Nazwa</th>
+                <th>Info ID</th>
+                <th>Role ID</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody class="description">
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td style="background-color: yellow;">@item.user_id</td>
+                <td>@item.username</td>
+                <td>@item.UserInfoid</td>
+                <td>@item.role_id</td>
+                <td></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

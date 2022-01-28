@@ -1,0 +1,16 @@
+﻿
+@model List<WebsiteProject.Models.Cameras>
+
+@{
+    ViewData["Title"] = "Camera View";
+}
+
+<div style="text-align: center; color: white">
+<h1>List of Cameras</h1>
+
+<a class="h4" href="/Cameras/Create" style="color: white">
+    Add new camera
+</a>
+ </div>
+          <partial name="_DisplayCameraPartial" model="Model" />
+</div>

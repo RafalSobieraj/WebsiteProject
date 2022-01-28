@@ -1,0 +1,36 @@
+﻿@model List<WebsiteProject.Models.Cameras>
+
+@{ 
+    var imagePath = "~/images/kamera.png";
+}
+<div style="max-width: 65%; margin: 0 auto; background-color: white;">
+    <table class="table table-bordered">
+        <thead style="text-align: center; vertical-align: middle; background-color: red;">
+            <tr>
+                <th>ID</th>
+                <th>Zdjęcie</th>
+                <th>Kamera</th>
+                <th>Typ Kamery</th>
+                <th>Rozdzielczość</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="description">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="background-color: yellow;">@item.id</td>
+                    <td>
+                        <img src="@imagePath" alt="Camera image" style="width: 100px;" />
+                    </td>
+                    <td>@item.camera_model</td>
+                    <td>@item.camera_type</td>
+                    <td>@item.resolution px</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.id">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+    </table>
