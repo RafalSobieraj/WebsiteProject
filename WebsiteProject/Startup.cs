@@ -60,7 +60,7 @@ namespace WebsiteProject
 
                 }
 
-                x.UseMySql(connStr);
+                x.UseMySQL(connStr);
 
             });
             services.AddControllersWithViews();
